@@ -18,8 +18,6 @@ y = df["mpg"]
 # Task 3: Split data into training and testing sets (80/20 split)
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 5)
 
-plt.show()
-
 # Task 4: Implement both ridge regression and LASSO regression using several values for alpha
 alphas = numpy.linspace(0, 1000, 50)
 ridge_scores = []
@@ -43,7 +41,6 @@ best_alpha_ridge = alphas[numpy.argmax(ridge_scores)]
 best_alpha_lasso = alphas[numpy.argmax(lasso_scores)]
 
 # Task 6: Plot the R2 scores for both regressors as functions of alpha
-plt.figure(figsize=(10, 6))
 plt.plot(alphas, ridge_scores, label="Ridge Regression")
 plt.plot(alphas, lasso_scores, label="LASSO Regression")
 plt.xlabel("Alpha")
