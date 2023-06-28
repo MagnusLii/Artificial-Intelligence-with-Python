@@ -12,9 +12,9 @@ Download bank.csv.
 Inspect the resulting dataframe with respect to the column names and the variable types.
 2) Pick data from the following columns to a second dataframe 'df2': y, job, marital, default, housing, poutcome.
 3) Convert categorical variables to dummy numerical values using the command
-´´´py
+```py
 df3 = pd.get_dummies(df2,columns=['job','marital','default','housing','poutcome'])
-´´´
+```
 4) Produce a heat map of correlation coefficients for all variables in df3. Describe the amount of correlation between the variables in your own words.
 5) Select the column called 'y' of df3 as the target variable y, and all the remaining columns for the explanatory variables X.
 6) Split the dataset into training and testing sets with 75/25  ratio.
